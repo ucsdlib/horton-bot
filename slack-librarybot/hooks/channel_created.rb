@@ -18,8 +18,14 @@ module SlackLibraryBot
         #                     "created": 1360782804,
         #                           "creator": "U024BE7LH"
         # }
-        channel_information = "Hi! A new topic was just created: #{data['channel']['name']}"
-        client.say(channel: 'general', text: channel_information)
+
+        client.say(channel: 'bot-testing', text: channel_information(data))
+      end
+
+      private
+
+      def channel_information(data)
+        "Hi! A new topic was just created: #{data['channel']['name']}"
       end
     end
   end
