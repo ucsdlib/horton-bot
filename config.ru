@@ -5,13 +5,14 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 # require 'dotenv'
 # Dotenv.load
 
-require 'slack-librarybot'
+require 'slack_library_bot'
 require 'web'
 
 Thread.abort_on_exception = true
 
 Thread.new do
   begin
+    SlackLibraryBot::Server.new
     SlackLibraryBot::Bot.run
   rescue StandardError => e
     STDERR.puts "ERROR: #{e}"

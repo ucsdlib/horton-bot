@@ -10,6 +10,7 @@ gem 'sinatra'
 gem 'slack-ruby-bot'
 
 group :development, :test do
+  gem 'byebug'
   gem 'rake'
 end
 
