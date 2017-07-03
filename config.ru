@@ -1,10 +1,5 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
-# TODO: replace with something localized
-# 1. Just pass in when starting the web server SLACK_API_TOKEN=*** bundle exec puma -p $port
-# require 'dotenv'
-# Dotenv.load
-
 require 'slack_library_bot'
 require 'web'
 

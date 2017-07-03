@@ -19,6 +19,13 @@ GEM
     capistrano-bundler (1.2.0)
       capistrano (~> 3.1)
       sshkit (~> 1.2)
+    capistrano-rbenv (2.1.1)
+      capistrano (~> 3.1)
+      sshkit (~> 1.3)
+    capistrano3-puma (3.1.0)
+      capistrano (~> 3.7)
+      capistrano-bundler
+      puma (~> 3.4)
     celluloid (0.17.3)
       celluloid-essentials
       celluloid-extras
@@ -125,6 +132,8 @@ DEPENDENCIES
   byebug (~> 9.0)
   capistrano (~> 3.6)
   capistrano-bundler (~> 1.2)
+  capistrano-rbenv (~> 2.0)
+  capistrano3-puma (~> 3.1)
   celluloid-io (~> 0.17)
   eventmachine (~> 1.2)
   puma (~> 3.9)

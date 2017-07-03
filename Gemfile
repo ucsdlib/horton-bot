@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 
 gem 'capistrano', '~> 3.6'
 gem 'capistrano-bundler', '~> 1.2'
+gem 'capistrano-rbenv', '~> 2.0'
+gem 'capistrano3-puma', '~> 3.1'
 gem 'celluloid-io', '~> 0.17'
 gem 'eventmachine', '~> 1.2'
 gem 'puma', '~> 3.9'
