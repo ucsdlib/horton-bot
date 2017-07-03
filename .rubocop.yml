@@ -3,6 +3,8 @@ AllCops:
   DisplayCopNames: true
   Exclude:
     - 'config/**/*'
+    - 'vendor/**/*'
+    - 'bin/**/*'
 
 Style/FrozenStringLiteralComment:
   Enabled: false
