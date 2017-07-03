@@ -1,4 +1,8 @@
+# frozen_string_literal: true
+
 module SlackLibraryBot
+  # Server will primarily be responsible for interacting with
+  # events from the real-time Slack API
   class Server < SlackRubyBot::Server
     on 'channel_created' do |client, data|
       # general_channel = 'C04RMMCGX' general channel

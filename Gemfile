@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-source 'https://rubygems.org'
-
 gem 'capistrano', '~> 3.6'
 gem 'capistrano-bundler', '~> 1.2'
 gem 'capistrano-rbenv', '~> 2.0'
@@ -14,7 +12,11 @@ gem 'slack-ruby-bot', '~> 0.10'
 
 group :development, :test do
   gem 'byebug', '~> 9.0'
+  gem 'coveralls', require: false
   gem 'rake', '~> 12.0'
+  gem 'rubocop', '~> 0.49.1', require: false
+  gem 'rubocop-rspec', '~> 1.15.1', require: false
+  gem 'simplecov', require: false
 end
 
 group :test do
