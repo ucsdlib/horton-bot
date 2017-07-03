@@ -5,8 +5,8 @@ module SlackLibraryBot
       general_channel = 'C62EZ1LLC' # bot-testing channel
 
       new_channel_info = <<~CHANNEL_INFO
-        "Hi! <@#{data['channel']['creator']}> just created a new :slack: channel
-        Check it out :point_right: <##{data['channel']['id']}>"
+        Hi! <@#{data['channel']['creator']}> just created a new :slack: channel
+        Check it out :point_right: <##{data['channel']['id']}>
       CHANNEL_INFO
 
       # TODO: this isn't populated. why?
