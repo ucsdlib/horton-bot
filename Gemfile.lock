@@ -8,7 +8,17 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
+    airbrussh (1.2.0)
+      sshkit (>= 1.6.1, != 1.7.0)
     byebug (9.0.6)
+    capistrano (3.8.1)
+      airbrussh (>= 1.0.0)
+      i18n
+      rake (>= 10.0.0)
+      sshkit (>= 1.9.0)
+    capistrano-bundler (1.2.0)
+      capistrano (~> 3.1)
+      sshkit (~> 1.2)
     celluloid (0.17.3)
       celluloid-essentials
       celluloid-extras
@@ -34,7 +44,6 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     diff-lcs (1.3)
-    dotenv (2.2.1)
     eventmachine (1.2.3)
     faraday (0.12.1)
       multipart-post (>= 1.2, < 3)
@@ -49,6 +58,9 @@ GEM
     minitest (5.10.2)
     multipart-post (2.0.0)
     mustermann (1.0.0)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (4.1.0)
     nio4r (2.1.0)
     public_suffix (2.0.5)
     puma (3.9.1)
@@ -88,6 +100,9 @@ GEM
       hashie
       json
       websocket-driver
+    sshkit (1.13.1)
+      net-scp (>= 1.1.2)
+      net-ssh (>= 2.8.0)
     thread_safe (0.3.6)
     tilt (2.0.7)
     timers (4.1.2)
@@ -107,18 +122,19 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  byebug
-  celluloid-io
-  dotenv
-  eventmachine
-  puma
-  rack-test
-  rake
-  rspec
-  sinatra
-  slack-ruby-bot
-  vcr
-  webmock
+  byebug (~> 9.0)
+  capistrano (~> 3.6)
+  capistrano-bundler (~> 1.2)
+  celluloid-io (~> 0.17)
+  eventmachine (~> 1.2)
+  puma (~> 3.9)
+  rack-test (~> 0.6)
+  rake (~> 12.0)
+  rspec (~> 3.6)
+  sinatra (~> 2.0)
+  slack-ruby-bot (~> 0.10)
+  vcr (~> 3.0)
+  webmock (~> 3.0)
 
 BUNDLED WITH
    1.15.1

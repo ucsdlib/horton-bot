@@ -2,21 +2,22 @@ source 'https://rubygems.org'
 
 source 'https://rubygems.org'
 
-gem 'celluloid-io'
-gem 'dotenv'
-gem 'eventmachine'
-gem 'puma'
-gem 'sinatra'
-gem 'slack-ruby-bot'
+gem 'capistrano', '~> 3.6'
+gem 'capistrano-bundler', '~> 1.2'
+gem 'celluloid-io', '~> 0.17'
+gem 'eventmachine', '~> 1.2'
+gem 'puma', '~> 3.9'
+gem 'sinatra', '~> 2.0'
+gem 'slack-ruby-bot', '~> 0.10'
 
 group :development, :test do
-  gem 'byebug'
-  gem 'rake'
+  gem 'byebug', '~> 9.0'
+  gem 'rake', '~> 12.0'
 end
 
 group :test do
-  gem 'rack-test'
-  gem 'rspec'
-  gem 'vcr'
-  gem 'webmock'
+  gem 'rack-test', '~> 0.6'
+  gem 'rspec', '~> 3.6'
+  gem 'vcr', '~> 3.0'
+  gem 'webmock', '~> 3.0'
 end
