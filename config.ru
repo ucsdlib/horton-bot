@@ -7,7 +7,6 @@ Thread.abort_on_exception = true
 
 Thread.new do
   begin
-    SlackLibraryBot::Server.new
     SlackLibraryBot::Bot.run
   rescue StandardError => e
     STDERR.puts "ERROR: #{e}"
