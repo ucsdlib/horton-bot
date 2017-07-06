@@ -8,6 +8,7 @@ gem 'celluloid-io', '~> 0.17'
 gem 'eventmachine', '~> 1.2'
 gem 'puma', '~> 3.9'
 gem 'sinatra', '~> 2.0'
+gem 'sinatra-contrib'
 gem 'slack-ruby-bot', '~> 0.10'
 
 group :development, :test do
