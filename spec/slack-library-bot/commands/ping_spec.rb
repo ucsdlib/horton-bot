@@ -1,6 +1,7 @@
 require 'spec_helper'
+require 'byebug'
 
-describe SlackLibraryBot::Commands::Ping do
+RSpec.describe SlackLibraryBot::Commands::Ping do
   def app
     SlackLibraryBot::Bot.instance
   end

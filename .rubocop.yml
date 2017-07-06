@@ -11,3 +11,6 @@ Style/FrozenStringLiteralComment:
 
 RSpec/FilePath:
   Enabled: false
+
+RSpec/ExampleLength:
+  Max: 10
