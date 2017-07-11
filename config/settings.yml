@@ -1,2 +1,8 @@
 channels:
   general: 'C04RMMCGX'
+commands:
+  service-desk: |
+    Need to contact the ITS service desk? Here are a few options
+    :slack: - Our <#C3AQL1F1A> channel!
+    :email: - Email us at lib-itsd@ucsd.edu
+    :slack_call: - Give us a call at 858-534-2530
