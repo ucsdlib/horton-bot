@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SlackLibraryBot::Bot do
+RSpec.describe SlackLibraryBot::Bot do
   def app
     SlackLibraryBot::Bot.instance
   end
