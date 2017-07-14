@@ -5,6 +5,11 @@ AllCops:
     - 'config/**/*'
     - 'vendor/**/*'
     - 'bin/**/*'
+    - 'spec/slack-library-bot/helpers/daily_hours_spec.rb'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
 
 Metrics/LineLength:
   Max: 100
