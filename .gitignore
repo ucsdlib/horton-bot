@@ -1,3 +1,6 @@
+# cache file for hours
+daily_hours.json
+
 *.gem
 *.rbc
 .byebug_history

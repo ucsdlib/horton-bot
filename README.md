@@ -7,10 +7,15 @@ A Slack-bot for the UCSD Library
 ## What can it do?
 
 1. For now, the bot will post to the `#general` channel when a new channel is created.
+2. `hours` - responds with Library building(s) hours for the day
+3. `service desk` - responds with options for contacting the service desk
 
-In time, assuming interest, additional bot-like features will be added, so staff can ask Horton questions like:
+In time, assuming interest, additional bot-like features will be added.
 
-1. what are the library hours today?
-2. how can I get help learning slack?
-3. I need help from the IT Service Desk, how can I contact them?
-4. ...
+## Installing
+
+1. Clone the repo: `git clone https://github.com/ucsdlib/horton-bot.git`
+2. Install dependencies: `bundle install`
+3. Install [phantomjs](http://phantomjs.org/). Used for `hours` command
+4. Run test suite `rake`. This will also run `rubocop` in addition to `rspec`
+5. Run application `SLACK_API_TOKEN=<your-token> bundle exec puma`
