@@ -20,8 +20,6 @@ module SlackLibraryBot
       LOCAL_HOURS_FILE = 'daily_hours.json'.freeze
       LIBRARY_WEBSITE = 'https://library.ucsd.edu'.freeze
 
-      # TODO: figure out how to test this.. vcr? mocks?
-      # TODO: add phantomjs to circle config (see horton/dmr)
       def self.hours
         today = Date.today
         return create_hours_file(today) unless File.exist? LOCAL_HOURS_FILE
