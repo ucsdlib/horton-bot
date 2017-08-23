@@ -14,6 +14,10 @@ RSpec.describe SlackLibraryBot::Helpers::DailyHours do
                  symbolize_names: true)
     end
 
+    let(:public_website_cached) do
+      File.read('spec/fixtures/public_website.html')
+    end
+
     before :all do
       delete_cached_file
     end
@@ -31,9 +35,8 @@ RSpec.describe SlackLibraryBot::Helpers::DailyHours do
       end
 
       it 'creates a cached hours file' do
-        VCR.use_cassette('public_website', record: :none) do
-          expect(described_class.hours).to eq(daily_hours[:locations])
-        end
+        allow(described_class).to receive(:public_website_html).and_return(public_website_cached)
+        expect(described_class.hours).to eq(daily_hours[:locations])
       end
     end
 
