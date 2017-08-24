@@ -1,29 +1,29 @@
 source 'https://rubygems.org'
 
-gem 'capistrano', '~> 3.6'
+gem 'capistrano', '~> 3.9'
 gem 'capistrano-bundler', '~> 1.2'
 gem 'capistrano-rbenv', '~> 2.0'
-gem 'capistrano3-puma', '~> 3.1'
+gem 'capistrano3-puma', '~> 3.1.1'
 gem 'celluloid-io', '~> 0.17'
-gem 'eventmachine', '~> 1.2'
+gem 'eventmachine', '~> 1.2.5'
 gem 'nokogiri', '~> 1.8'
-gem 'puma', '~> 3.9'
+gem 'puma', '~> 3.10'
 gem 'sinatra', '~> 2.0'
 gem 'sinatra-contrib'
 gem 'slack-ruby-bot', '~> 0.10'
-gem 'watir', '~> 6.4'
+gem 'watir', '~> 6.7.3'
 
 group :development, :test do
-  gem 'byebug', '~> 9.0'
+  gem 'byebug', '~> 9.1'
   gem 'coveralls', require: false
   gem 'rake', '~> 12.0'
   gem 'rubocop', '~> 0.49.1', require: false
   gem 'rubocop-rspec', '~> 1.15.1', require: false
-  gem 'simplecov', require: false
+  gem 'simplecov', '~> 0.15', require: false
 end
 
 group :test do
-  gem 'rack-test', '~> 0.6'
+  gem 'rack-test', '~> 0.7'
   gem 'rspec', '~> 3.6'
   gem 'timecop', '~> 0.9'
   gem 'vcr', '~> 3.0'

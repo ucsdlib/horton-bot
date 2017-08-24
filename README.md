@@ -1,6 +1,6 @@
 # horton-bot
 [![Coverage
-Status](https://coveralls.io/repos/github/ucsdlib/horton-bot/badge.svg?branch=develop)](https://coveralls.io/github/ucsdlib/horton-bot?branch=develop) [![CircleCI](https://circleci.com/gh/ucsdlib/horton-bot/tree/develop.svg?style=svg)](https://circleci.com/gh/ucsdlib/horton-bot/tree/develop)
+Status](https://coveralls.io/repos/github/ucsdlib/horton-bot/badge.svg?branch=develop)](https://coveralls.io/github/ucsdlib/horton-bot?branch=develop) [![CircleCI](https://circleci.com/gh/ucsdlib/horton-bot/tree/develop.svg?style=svg)](https://circleci.com/gh/ucsdlib/horton-bot/tree/develop) [![Dependency Status](https://gemnasium.com/badges/github.com/ucsdlib/horton-bot.svg)](https://gemnasium.com/github.com/ucsdlib/horton-bot)
 
 A Slack-bot for the UCSD Library
 
