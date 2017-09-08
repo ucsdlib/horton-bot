@@ -11,7 +11,7 @@ gem 'puma', '~> 3.10'
 gem 'sinatra', '~> 2.0'
 gem 'sinatra-contrib'
 gem 'slack-ruby-bot', '~> 0.10'
-gem 'watir', '~> 6.7.3'
+gem 'watir', '~> 6.8.3'
 
 group :development, :test do
   gem 'byebug', '~> 9.1'
