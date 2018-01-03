@@ -16,7 +16,7 @@ gem 'watir', '~> 6.8.3'
 group :development, :test do
   gem 'byebug', '~> 9.1'
   gem 'coveralls', require: false
-  gem 'rake', '~> 12.0'
+  gem 'rake', '~> 12.3'
   gem 'rubocop', '~> 0.49.1', require: false
   gem 'rubocop-rspec', '~> 1.15.1', require: false
   gem 'simplecov', '~> 0.15', require: false
