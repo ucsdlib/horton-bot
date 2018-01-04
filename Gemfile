@@ -26,6 +26,6 @@ group :test do
   gem 'rack-test', '~> 0.7'
   gem 'rspec', '~> 3.6'
   gem 'timecop', '~> 0.9'
-  gem 'vcr', '~> 3.0'
+  gem 'vcr', '~> 4.0'
   gem 'webmock', '~> 3.0'
 end
