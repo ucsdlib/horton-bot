@@ -93,7 +93,7 @@ GEM
       ast (~> 2.2)
     powerpack (0.1.1)
     public_suffix (3.0.1)
-    puma (3.10.0)
+    puma (3.11.0)
     rack (2.0.3)
     rack-protection (2.0.0)
       rack
@@ -199,7 +199,7 @@ DEPENDENCIES
   coveralls
   eventmachine (~> 1.2.5)
   nokogiri (>= 1.8)
-  puma (~> 3.10)
+  puma (~> 3.11)
   rack-test (~> 0.8)
   rake (~> 12.3)
   rspec (~> 3.7)
