@@ -1,6 +1,17 @@
 # cache file for hours
 daily_hours.json
 
+# ansible/vagrant stuff
+ops/roles/*
+ops/.ssh-config
+ops/.vagrant
+ops/ansible.cfg
+ops/hosts
+ops/*.retry
+ops/*.log
+*.log
+
+
 *.gem
 *.rbc
 .byebug_history

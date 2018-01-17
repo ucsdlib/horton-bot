@@ -1,0 +1,30 @@
+---
+- name: Configure system for Bot application
+  hosts: lib-bot
+
+  vars_files:
+    - vars/rbenv.yml
+    - vars/bot.yml
+
+  roles:
+    - { role: geerlingguy.repo-epel, become: true }
+    - { role: ucsdlib.ansible-role-phantomjs, become: true }
+    - { role: zzet.rbenv, become: true }
+
+  tasks:
+    - name: Install dependencies
+      become: yes
+      package:
+        name: gcc-c++
+        state: present
+
+    - name: Install bundler gem
+      gem:
+        name: bundler
+        state: present
+
+    # TODO: see https://github.com/notch8/horton/blob/98beb4a6af57340dc93a779b9fcae188b36113cd/ops/roles/webserver/install/tasks/puma.yml
+    # TODO: install templates
+    # TODO: start puma service? or do this after installing the app..
+
+- import_playbook: deploy.yml

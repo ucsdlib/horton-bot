@@ -1,0 +1,32 @@
+# TODO: https://github.com/puma/puma/blob/master/examples/config.rb
+environment 'production'
+threads 1, 16
+
+# needed for restarts
+directory '{{ ansistrano_deploy_to }}/{{ ansistrano_current_dir }}'
+
+# in a multi-server architecture, bind to the private network address
+# with tcp to the http server (apache) on a different host.
+# bind 'tcp://<ip#>:<port#>'
+# TODO: this should mirror the socket/service setup?
+# default bind 'tcp://0.0.0.0:9292'
+bind 'tcp://{{ server_name }}:{{ puma_port }}'
+
+daemonize
+pidfile '{{ shared_root }}/tmp/pids/{{ project_name }}-puma.pid'
+# TODO: check this w/ John
+stdout_redirect '{{ shared_root }}/log/stdout', '{{ shared_root }}/log/stderr'
+
+on_restart do
+# Code to run before doing a restart. This code should
+# close log files, database connections, etc.
+end
+
+workers '{{ ansible_processor_vcpus }}'
+worker_timeout 120
+# on_worker_boot do
+#   # Code to run when a worker boots to setup the process before booting
+# end
+
+before_fork do
+end

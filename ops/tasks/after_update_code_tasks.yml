@@ -1,0 +1,8 @@
+---
+- name: Create /tmp folder for pids/socks
+  file:
+    state: directory
+    owner: "{{ bot_user }}"
+    group: "{{ bot_user }}"
+    mode: 0755
+    path: "{{ ansistrano_release_path.stdout }}/tmp"

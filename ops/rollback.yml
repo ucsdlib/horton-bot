@@ -1,0 +1,7 @@
+---
+- name: Rollback Bot application
+  hosts: lib-bot
+  become_user: "{{ bot_user }}"
+  become: yes
+  roles:
+    - { role: carlosbuenosvinos.ansistrano-rollback }
