@@ -1,0 +1,7 @@
+---
+- name: Bundle install Gem dependencies
+  become: no
+  bundler:
+    state: present
+    gemfile: "{{ ansistrano_release_path.stdout }}/Gemfile"
+

@@ -1,0 +1,36 @@
+---
+- name: Deploy Bot application with Ansistrano
+  hosts: lib-bot
+
+  vars_files:
+    - vars/ansistrano.yml
+    - vars/bot.yml
+    # - vars/slack_token.yml Temporarily, until we need PUMA
+
+  tasks:
+    - name: Get timestamp for repo
+      hosts: localhost
+      shell: 'date +%Y%m%d%H%M%S.%5N'
+      register: current_run_timestamp
+
+    - name: Set release version
+      set_fact: ansistrano_release_version = "{{ current_run_timestamp.stdout }}"
+
+    - name: Permissions and folders
+      become: yes
+      file:
+        path: "{{ item }}"
+        recurse: true
+        state: directory
+        owner: "{{ bot_user }}"
+        group: "{{ bot_user }}"
+        mode: 0755
+      with_items:
+        - "{{ ansistrano_deploy_to }}/releases"
+        - "{{ ansistrano_deploy_to }}/shared"
+        - "{{ ansistrano_deploy_to }}"
+
+  roles:
+    - { role: carlosbuenosvinos.ansistrano-deploy, become: yes }
+
+    # TODO: start/restart puma app here? wait until puma is actually setup as a service and figure out..

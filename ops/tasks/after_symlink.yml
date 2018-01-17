@@ -1,0 +1,7 @@
+---
+# TODO: kill any existing puma service
+# start puma service
+- name: Restart Puma
+  service:
+    name: puma
+    state: restarted

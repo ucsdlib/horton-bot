@@ -1,0 +1,19 @@
+---
+ansistrano_deploy_from: "{{ playbook_dir }}/../" # Where my local project is (relative or absolute path)
+ansistrano_deploy_to: "/home/{{ bot_user }}/{{ bot_project_name }}" # Base path to deploy to.
+# ansistrano_deploy_to: "/opt/{{ bot_project_name }}" # Base path to deploy to.
+ansistrano_version_dir: "releases" # Releases folder name
+ansistrano_current_dir: "current" # Softlink name. You should rarely changed it.
+ansistrano_current_via: "symlink"
+ansistrano_keep_releases: 3 # Releases to keep after a new deployment. See "Pruning old releases".
+ansistrano_shared_paths:
+  - log
+  - tmp/pids
+  - tmp/sockets
+
+ansistrano_deploy_via: "git"
+ansistrano_git_repo: https://github.com/ucsdlib/horton-bot.git
+ansistrano_git_branch: master
+ansistrano_before_symlink_tasks_file: "{{ playbook_dir }}/tasks/before_symlink.yml"
+# ansistrano_after_symlink_tasks_file: "{{ playbook_dir }}/tasks/after_symlink.yml"
+ansistrano_after_update_code_tasks_file: "{{ playbook_dir }}/tasks/after_update_code_tasks.yml"
