@@ -1,7 +1,7 @@
 ---
-# TODO: kill any existing puma service
+# TODO: kill any existing puma service via tmp/pids?
 # start puma service
-- name: Restart Puma
-  service:
-    name: puma
-    state: restarted
+# TODO: doesn't seem like hours file command is working..
+# TODO: this ain't working, but kinda works within VM
+- name: Start Puma
+  command: "cd {{ ansistrano_release_path.stdout }} && SLACK_API_TOKEN={{ bot_slack_token }} bundle exec puma -p 9292"
