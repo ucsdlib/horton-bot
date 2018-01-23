@@ -1,6 +1,6 @@
 ---
 - name: Configure system for Bot application
-  hosts: lib-bot
+  hosts: lib-slackbots
 
   vars_files:
     - vars/rbenv.yml

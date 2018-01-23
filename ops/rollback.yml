@@ -1,6 +1,6 @@
 ---
 - name: Rollback Bot application
-  hosts: lib-bot
+  hosts: lib-slackbots
   become_user: "{{ bot_user }}"
   become: yes
   roles:
