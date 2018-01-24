@@ -32,5 +32,3 @@
 
   roles:
     - { role: carlosbuenosvinos.ansistrano-deploy, become: yes }
-
-    # TODO: start/restart puma app here? wait until puma is actually setup as a service and figure out..
