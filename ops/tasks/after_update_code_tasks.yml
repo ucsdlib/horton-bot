@@ -1,8 +1,13 @@
 ---
-- name: Create /tmp folder for pids/socks
+- name: Create release folders
   file:
     state: directory
     owner: "{{ bot_user }}"
     group: "{{ bot_user }}"
     mode: 0755
-    path: "{{ ansistrano_release_path.stdout }}/tmp"
+    path: "{{ ansistrano_release_path.stdout }}/{{ item }}"
+  with_items:
+    - tmp
+    - sbin
+    - .bundle
+    - vendor

@@ -3,8 +3,10 @@
   hosts: lib-slackbots
 
   vars_files:
-    - vars/rbenv.yml
+    - vars/ansistrano.yml
     - vars/bot.yml
+    - vars/rbenv.yml
+    - vars/slack_token.yml
 
   roles:
     - { role: geerlingguy.repo-epel, become: true }
@@ -23,8 +25,25 @@
         name: bundler
         state: present
 
-    # TODO: see https://github.com/notch8/horton/blob/98beb4a6af57340dc93a779b9fcae188b36113cd/ops/roles/webserver/install/tasks/puma.yml
-    # TODO: install templates
-    # TODO: start puma service? or do this after installing the app..
+    - name: Install Puma service files
+      become: yes
+      template:
+        src: "{{ item }}.j2"
+        dest: /etc/systemd/system/{{ item }}
+        mode: 0755
+      with_items:
+        - puma.service
+        - puma.socket
+
+    - name: Enable Puma service
+      become: yes
+      systemd:
+        enabled: yes
+        state: stopped
+        daemon_reload: yes
+        name: "{{ item }}"
+      with_items:
+        - puma.socket
+        - puma.service
 
 - import_playbook: deploy.yml
