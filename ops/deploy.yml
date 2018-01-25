@@ -7,6 +7,9 @@
     - vars/bot.yml
     - vars/slack_token.yml
 
+  roles:
+    - { role: carlosbuenosvinos.ansistrano-deploy, become: yes }
+
   tasks:
     - name: Get timestamp for repo
       hosts: localhost
@@ -30,5 +33,49 @@
         - "{{ ansistrano_deploy_to }}/shared"
         - "{{ ansistrano_deploy_to }}"
 
-  roles:
-    - { role: carlosbuenosvinos.ansistrano-deploy, become: yes }
+    - name: Install Puma config file
+      become: yes
+      template:
+        src: puma.rb.j2
+        dest: "{{ ansistrano_deploy_to }}/shared/puma.rb"
+        owner: "{{ bot_user }}"
+        group: "{{ bot_group }}"
+        mode: 0644
+
+    - name: Check if puma service file exists
+      stat:
+        path: /etc/systemd/system/puma.service
+      register: stat_result
+
+    - name: Restarting Puma..
+      systemd:
+        name: puma
+        state: restarted
+      when: stat_result.stat.exists == True
+
+    - block:
+      - name: Install Puma service files
+        become: yes
+        template:
+          src: "{{ item }}.j2"
+          dest: /etc/systemd/system/{{ item }}
+          mode: 0755
+        with_items:
+          - puma.service
+
+      - name: Reload systemd daemon
+        become: yes
+        systemd:
+          daemon_reload: yes
+
+      - name: Enable Puma service
+        become: yes
+        systemd:
+          enabled: yes
+          state: started
+          name: "{{ item }}"
+        with_items:
+          - puma.service
+
+      when: stat_result.stat.exists == False
+
