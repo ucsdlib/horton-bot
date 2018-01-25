@@ -1,6 +1,7 @@
 ---
-- name: Kindly kick Puma
-  become: yes
-  systemd:
-    state: restarted
-    name: puma
+
+# - name: Kindly kick Puma
+#   become: yes
+#   systemd:
+#     state: restarted
+#     name: puma

@@ -7,15 +7,11 @@ directory '{{ ansistrano_deploy_to }}/{{ ansistrano_current_dir }}'
 
 # in a multi-server architecture, bind to the private network address
 # with tcp to the http server (apache) on a different host.
-# bind 'tcp://<ip#>:<port#>'
-# TODO: this should mirror the socket/service setup?
-# default bind 'tcp://0.0.0.0:9292'
-bind 'tcp://{{ server_name }}:{{ puma_port }}'
+bind 'tcp://0.0.0.0:9292'
 
-daemonize
-pidfile '{{ shared_root }}/tmp/pids/{{ project_name }}-puma.pid'
-# TODO: check this w/ John
-stdout_redirect '{{ shared_root }}/log/stdout', '{{ shared_root }}/log/stderr'
+pidfile '{{ ansistrano_deploy_to }}/shared/tmp/pids/puma.pid'
+state_path '{{ ansistrano_deploy_to }}/shared/tmp/pids/puma.state'
+stdout_redirect '{{ ansistrano_deploy_to }}/shared/log/stdout', '{{ ansistrano_deploy_to }}/shared/log/stderr'
 
 on_restart do
 # Code to run before doing a restart. This code should

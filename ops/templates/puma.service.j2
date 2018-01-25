@@ -3,7 +3,7 @@ Description=Puma HTTP Server for SlackBot
 After=network.target
 
 # Uncomment for socket activation (see below)
-Requires=puma.socket
+# Requires=puma.socket
 
 [Service]
 # Foreground process (do not use --daemon in ExecStart or config.rb)
@@ -11,11 +11,10 @@ Type=simple
 
 # Preferably configure a non-privileged user
 User={{ bot_user }}
-Group={{ bot_group }}
 
 # The path to the puma application root
 # Also replace the "<WD>" place holders below with this path.
-# WorkingDirectory={{ ansistrano_deploy_to }}/{{ ansistrano_current_dir }}
+WorkingDirectory={{ ansistrano_deploy_to }}/{{ ansistrano_current_dir }}
 
 # Helpful for debugging socket activation, etc.
 Environment="PUMA_DEBUG=1"
@@ -24,12 +23,8 @@ Environment="PUMA_DEBUG=1"
 # `bundle binstubs puma --path ./sbin` in the WorkingDirectory
 # (replace "<WD>" below)
 Environment="SLACK_API_TOKEN={{ bot_slack_token }}"
-ExecStart={{ ansistrano_deploy_to }}/{{ ansistrano_current_dir }}/sbin/puma -b tcp://0.0.0.0:9292 -b ssl://0.0.0.0:9293?key=key.pem&cert=cert.pem {{ ansistrano_deploy_to }}/{{ ansistrano_current_dir }}/config.ru
-
-# Variant: Use config file with `bind` directives instead:
-# ExecStart=<WD>/sbin/puma -C config.rb
-# ExecStart='{{ ansistrano_deploy_to }}/{{ ansistrano_current_dir }}'/bundle exec --keep-file-descriptors puma -C config.rb'
-# Variant: Use `bundle exec --keep-file-descriptors puma` instead of binstub
+ExecStart=/home/{{ bot_user }}/.rbenv/shims/bundle exec puma -C {{ ansistrano_deploy_to }}/shared/puma.rb
+ExecReload=/home/{{ bot_user }}/.rbenv/shims/bundle exec pumactl restart
 
 Restart=always
 
