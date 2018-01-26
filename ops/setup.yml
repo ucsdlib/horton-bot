@@ -3,9 +3,7 @@
   hosts: lib-slackbots
 
   vars_files:
-    - vars/ansistrano.yml
     - vars/bot.yml
-    - vars/rbenv.yml
     - vars/slack_token.yml
 
   roles:
