@@ -5,5 +5,4 @@
     state: present
     chdir: "{{ ansistrano_release_path.stdout }}"
     binstub_directory: "sbin/"
-    # gemfile: "{{ ansistrano_release_path.stdout }}/Gemfile"
     deployment_mode: yes

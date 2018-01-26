@@ -1,7 +1,16 @@
 ---
 - name: Rollback Bot application
   hosts: lib-slackbots
-  become_user: "{{ bot_user }}"
   become: yes
+
+  vars_files:
+    - vars/bot.yml
+
   roles:
     - { role: carlosbuenosvinos.ansistrano-rollback }
+
+  tasks:
+    - name: Restarting Puma..
+      systemd:
+        name: puma
+        state: restarted
