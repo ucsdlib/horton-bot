@@ -11,9 +11,11 @@
 
   pre_tasks:
     - name: Get timestamp for repo
-      hosts: localhost
       shell: 'date +%Y%m%d%H%M%S.%5N'
       register: current_run_timestamp
+      connection: local
+      run_once: true
+      changed_when: false
 
     - name: Set release version
       set_fact: ansistrano_release_version = "{{ current_run_timestamp.stdout }}"
