@@ -6,7 +6,6 @@ AllCops:
     - 'vendor/**/*'
     - 'bin/**/*'
     - 'ops/**/*'
-    - 'spec/slack-library-bot/helpers/daily_hours_spec.rb'
 
 Metrics/BlockLength:
   Exclude:
@@ -14,6 +13,8 @@ Metrics/BlockLength:
 
 Metrics/LineLength:
   Max: 100
+  Exclude:
+    - 'spec/slack-library-bot/commands/hours_spec.rb'
 
 Style/FrozenStringLiteralComment:
   Enabled: false

@@ -11,7 +11,7 @@ ops/*.retry
 ops/*.log
 *.log
 
-
+fugitive*
 *.gem
 *.rbc
 .byebug_history
