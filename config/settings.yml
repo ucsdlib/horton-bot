@@ -15,3 +15,50 @@ commands:
     :slack: - Our <#C3AQL1F1A> channel!
     :email: - Email us at lib-itsd@ucsd.edu
     :slack_call: - Give us a call at 858-534-2530
+
+  new-user: |
+    :wave: At the UC San Diego Library, we are using Slack for three main benefits: Communications, Transparency, and Community. To help us reach those benefits, we created these guidelines. :rocket:
+
+    :cloud: Slack is an officially supported communication platform for the UC San Diego Library. The UC San Diego Principles of Community apply, and remember, if you wouldn't put it in an email, you shouldn't put it in Slack.
+
+    *:slack:Channel Guide*
+    1. *#announcements* - Lib-All emails are automatically reposted to this channel. New posts are not generated to this channel but you can add comments to or clarify a lib-all.
+    2. *#general* - For posting library-related information. (i.e. upcoming programs, intersting articles about the library or other libraries).
+    3. *#random* - For posting non-library related matters. (i.e. SpaceX Falcon Heavy launch, citrus fruit giveaways, etc.)
+    4. *#it-servicedesk* - Submit IT requests on this channel.
+
+    *:slack:Communication Etiquette*
+    BE CLEAR AND PROFESSIONAL IN COMMUNICATION
+    * Take the time to craft your message with full thoughts. Don't leave people waiting for more or leave room for another message to interrupt your train of thought.
+    * Direct Message (DM) yourself to proofread important messages. Check for readability, clarify and formatting.
+
+    BE MINDFUL OF YOUR AVAILABILITY
+    * Within working hours, try to respond to your colleagues in a timely manner.
+    * But what if I'm in a meeting or working on other things and I can't respond right away? Slack has several features to communicate your availability:
+        1. *Update your status* to let others know you are in a meeting, on vacation, or telecommuting/working remote.
+        2. *Set yourself to away*
+        3. Set up a *Do Not Disturb* schedule in your slack preferences
+    * In busy channels (such as #general) respond to questions using the thread feature
+
+    *:slack:Channel Etiquette*
+    *:thumbsup: USE PUBLIC CHANNELS, ALMOST ALWAYS*
+    * As much as possible should take place in public channels - to make it searchable, open, and accessible to others.
+    * Create new public channels when it's clear that a specific, sizable group will need to have regular, long-term communication
+    * Browse existing channels before you create a new channel. Check whether something exists that is similar.
+    * Clearly state the intent in the channel *name*, *purpose*, and *topic* to make your channel discoverable. Drive good conversation by inviting the right colleagues to join.
+
+    *:x: MAKE SURE THERE'S A BUSINESS REASON TO CREATE PRIVATE CHANNELS.*
+    * Rarely necessary, the only reason for making a private channel is if only selected users should see confidential information.
+
+    *:hear_no_evil: BE RESPONSIBLE FOR KEEPING OUR SIGNAL:NOISE RATIO HIGH BY USING @MENTIONS IN A SMART WAY.*
+    * We seldom use *@chanell* except for critical matters. You are notifying hundreds of people that could be in different time zones. *@here* (outside of #general) is less disruptive as it alerts everyone in the channel only if they are currently online.
+
+    *:slack:To sum it all up...*
+
+    *:shark: Be patient with others.*
+    Your colleagues are awesome but busy people. They may not be a part of or prioritize the channels in which you're communicating. Use *@mention* when you need someone, indicate importance, and be prepared to link to your original posts to catch people up.
+
+    *:hugging_face: Be patient with yourself.*
+    Everybody's role is to be engaged with the channels pertinent to their job. Don't drive yourself nuts. Star the ones you need all the time, keep an eye on the others, and rely on mentions and invitations to ones you don't always need to be looking at.
+
+
