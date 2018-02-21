@@ -185,7 +185,7 @@ DEPENDENCIES
   timecop (~> 0.9)
   vcr (~> 4.0)
   watir (~> 6.10.2)
-  webmock (~> 3.2)
+  webmock (~> 3.3)
 
 BUNDLED WITH
    1.16.0.pre.3
