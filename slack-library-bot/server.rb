@@ -13,5 +13,11 @@ module SlackLibraryBot
       client.say(channel: SlackLibraryBot::Web.settings.channels['general'],
                  text: new_channel_info)
     end
+
+    on 'team_join' do |client, data|
+        # TODO: actually load in the json message and send it to the user
+        # client.say(text: SlackLibraryBot::Web.settings.commands['new-user'],
+        #            channel: data['user']['id])
+    end
   end
 end
