@@ -1,63 +1,41 @@
 require 'json'
 require 'nokogiri'
 require 'open-uri'
-require 'watir'
 
 module SlackLibraryBot
   module Helpers
-    # Pulls Hours data from the public website directly
-    # This was done because:
-    # 1. there is no daily hours json feed
-    # 2. recreating this data would be duplicating much effort
-    #
-    # Since this is slower, we're caching the data for each day
+    # Load static html page for today's hours.
+    # Only requirement is to pass in the year:
+    # Example: https://library.ucsd.edu/hours/bot/2018.html
     class DailyHours
-      LOCATIONS = { 'lpw-hours-glb' => 'Geisel Library Building',
-                    'lpw-hours-blb' => 'Biomedical Library Buildling',
-                    'lpw-hours-aud' => 'Audrey\'s Cafe',
-                    'lpw-hours-sca' => 'Special Collections & Archives',
-                    'lpw-hours-gsc' => 'East Commons (Overnight Study)' }.freeze
-      LOCAL_HOURS_FILE = 'daily_hours.json'.freeze
-      LIBRARY_WEBSITE = 'https://library.ucsd.edu'.freeze
+      LOCATIONS = { 'loc-glb' => 'Geisel Library Building',
+                    'loc-blb' => 'Biomedical Library Buildling',
+                    'loc-ac' => 'Audrey\'s Cafe',
+                    'loc-sc' => 'Special Collections & Archives',
+                    'loc-gsfe' => 'East Commons (Overnight Study)' }.freeze
+      LIBRARY_HOURS_BASE = 'https://library.ucsd.edu/hours/bot/'.freeze
 
       def self.hours
-        today = Date.today
-        return create_hours_file(today) unless File.exist? LOCAL_HOURS_FILE
-
-        file = JSON.parse(File.read(LOCAL_HOURS_FILE), symbolize_names: true)
-        return file[:locations] if valid_date?(today, file)
-
-        create_hours_file(today)
+        scrape_hours_page
       end
 
       class << self
         private
 
-        def valid_date?(today, file)
-          String(today).eql?(String(file[:today]))
-        end
-
-        def create_hours_file(today)
-          hours = scrape_website(today)
-          File.open(LOCAL_HOURS_FILE, 'w') do |file|
-            file.write(JSON.generate(hours))
-          end
-          hours[:locations]
-        end
-
-        def scrape_website(today)
-          data = { today: String(today) }
-          doc = Nokogiri::HTML(public_website_html)
-          data[:locations] = LOCATIONS.map do |id, name|
-            { name: name, hours: doc.css("li##{id} div").text }
+        def scrape_hours_page
+          doc = hours_page_data
+          data = LOCATIONS.map do |id, name|
+            { name: name, hours: doc.css("li##{id} div.hours").text }
           end
           data
         end
 
-        def public_website_html
-          browser = Watir::Browser.new :phantomjs
-          browser.goto LIBRARY_WEBSITE
-          browser.html
+        def hours_page_data
+          Nokogiri::HTML(open(hours_static_page))
+        end
+
+        def hours_static_page
+          LIBRARY_HOURS_BASE + String(Date.today.year) + '.html'
         end
       end
     end
