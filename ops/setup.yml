@@ -8,7 +8,6 @@
 
   roles:
     - { role: geerlingguy.repo-epel, become: true }
-    - { role: ucsdlib.ansible-role-phantomjs, become: true }
     - { role: zzet.rbenv, become: true }
 
   tasks:
