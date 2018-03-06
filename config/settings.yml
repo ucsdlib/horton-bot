@@ -22,17 +22,18 @@ commands:
     :cloud: Slack is an officially supported communication platform for the UC San Diego Library. The UC San Diego Principles of Community apply, and remember, if you wouldn't put it in an email, you shouldn't put it in Slack.
 
     *:slack:Channel Guide*
-    1. *#announcements* - Lib-All emails are automatically reposted to this channel. New posts are not generated to this channel but you can add comments to or clarify a lib-all.
+    1. *#lib-all* - Lib-All emails are automatically sent to this channel. New posts to this channel aren't recommended (because they probably won't be seen) but you can add a comment to or clarify a lib-all.
     2. *#general* - For posting library-related information. (i.e. upcoming programs, intersting articles about the library or other libraries).
     3. *#random* - For posting non-library related matters. (i.e. SpaceX Falcon Heavy launch, citrus fruit giveaways, etc.)
     4. *#it-servicedesk* - Submit IT requests on this channel.
+    5. *#coffee-buddies* - Join this channel to get to know your fellow co-workers! You'll be paired with a library employee every two weeks and you can arrange a time to meet up over coffee, tea, or lunch. 
 
     *:slack:Communication Etiquette*
-    BE CLEAR AND PROFESSIONAL IN COMMUNICATION
+    Be clear and professional in communication
     * Take the time to craft your message with full thoughts. Don't leave people waiting for more or leave room for another message to interrupt your train of thought.
     * Direct Message (DM) yourself to proofread important messages. Check for readability, clarify and formatting.
 
-    BE MINDFUL OF YOUR AVAILABILITY
+    Be mindful of your availability
     * Within working hours, try to respond to your colleagues in a timely manner.
     * But what if I'm in a meeting or working on other things and I can't respond right away? Slack has several features to communicate your availability:
         1. *Update your status* to let others know you are in a meeting, on vacation, or telecommuting/working remote.
@@ -41,18 +42,18 @@ commands:
     * In busy channels (such as #general) respond to questions using the thread feature
 
     *:slack:Channel Etiquette*
-    *:thumbsup: USE PUBLIC CHANNELS, ALMOST ALWAYS*
-    * As much as possible should take place in public channels - to make it searchable, open, and accessible to others.
+    *:thumbsup: Use public channels, almost always*
+    * As much as possible conversations should take place in public channels - to make them searchable, open, and accessible to others.
     * Create new public channels when it's clear that a specific, sizable group will need to have regular, long-term communication
     * Browse existing channels before you create a new channel. Check whether something exists that is similar.
     * Clearly state the intent in the channel *name*, *purpose*, and *topic* to make your channel discoverable. Drive good conversation by inviting the right colleagues to join.
 
-    *:x: MAKE SURE THERE'S A BUSINESS REASON TO CREATE PRIVATE CHANNELS.*
-    * Rarely necessary, the only reason for making a private channel is if only selected users should see confidential information.
-
-    *:hear_no_evil: BE RESPONSIBLE FOR KEEPING OUR SIGNAL:NOISE RATIO HIGH BY USING @MENTIONS IN A SMART WAY.*
-    * We seldom use *@chanell* except for critical matters. You are notifying hundreds of people that could be in different time zones. *@here* (outside of #general) is less disruptive as it alerts everyone in the channel only if they are currently online.
-
+    *:x: Make sure there's a business reason to create private channels.*
+    * On rare occasion, you may need to make a channel private for confidential information.
+    
+    *:hear_no_evil: Use @mentions in a smart way.*
+    * @mentions are a way to quickly notify a person, group, or channel by simply putting an @ in front of their username or slack group name. We seldomly use @channel except for critical matters since you could be notifying hundreds of people, possibly in different time zones. @here (outside of #general) is less disruptive as it alerts everyone in the channel only if they are currently online.
+    
     *:slack:To sum it all up...*
 
     *:shark: Be patient with others.*
