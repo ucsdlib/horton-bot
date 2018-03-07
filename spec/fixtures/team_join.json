@@ -1,0 +1,8 @@
+{
+  "type" : "team_join",
+  "user" : {
+    "id" : "U024BE7LH",
+    "name" : "Tim"
+  }
+}
+
