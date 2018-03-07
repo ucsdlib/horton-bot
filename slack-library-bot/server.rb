@@ -15,9 +15,29 @@ module SlackLibraryBot
     end
 
     on 'team_join' do |client, data|
-        # TODO: actually load in the json message and send it to the user
-        # client.say(text: SlackLibraryBot::Web.settings.commands['new-user'],
-        #            channel: data['user']['id])
+      im_channel_id = slack_im_open!(data['user']['id'])
+      client.say(text: SlackLibraryBot::Web.settings.commands['new-user'],
+                 channel: im_channel_id)
+    end
+
+    # Get the bot's Slack API client
+    def self.slack_client
+      @slack_client ||= ::Slack::Web::Client.new(token: ENV['SLACK_API_TOKEN'])
+    end
+
+    # returns the channel id of an open IM channel
+    def self.slack_im_open!(user_slack_id)
+      @im_opens ||= {}
+      return @im_opens[user_slack_id] if @im_opens[user_slack_id]
+
+      begin
+        im = slack_client.im_open(user: user_slack_id)
+        im_channel_id = im && im['channel'] && im['channel']['id']
+        return @im_opens[user_slack_id] = im_channel_id
+      rescue Slack::Web::Api::Errors::SlackError => err
+        STDERR.puts err.to_s
+        return nil
+      end
     end
   end
 end
