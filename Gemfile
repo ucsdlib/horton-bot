@@ -9,7 +9,7 @@ gem 'sinatra-contrib'
 gem 'slack-ruby-bot', '~> 0.10'
 
 group :development, :test do
-  gem 'byebug', '~> 9.1'
+  gem 'byebug', '~> 10.0'
   gem 'coveralls', require: false
   gem 'rake', '~> 12.3'
   gem 'rubocop', '~> 0.49.1', require: false
