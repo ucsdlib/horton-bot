@@ -7,6 +7,7 @@ help:
 
     *service desk* - Will let you knows ways to contact the ITS Service Desk
     *hours* - Will let you know today's Library hours (for all buildings)
+    *rooms* - Will let you know the name and location of our meeting rooms in Geisel and BML
 channels:
   general: 'C04RMMCGX'
 commands:
@@ -15,6 +16,19 @@ commands:
     :slack: - Our <#C3AQL1F1A> channel!
     :email: - Email us at lib-itsd@ucsd.edu
     :slack_call: - Give us a call at 858-534-2530
+
+  rooms:
+    - { name: "Bay Conference Room", location: "BLB, 1st floor, Staff Area" }
+    - { name: "Beech Conference Room", location: "BLB, 1st floor, Staff Area" }
+    - { name: "Cedar Conference Room", location: "Geisel Southwest, 1st floor, CDM/LSP" }
+    - { name: "The Gregor Room", location: "Geisel Core, 2nd floor" }
+    - { name: "Laurel Conference Room", location: "Geisel Core, 2nd floor, AOP" }
+    - { name: "Lemon Conference Room", location: "Geisel Core, 2nd floor, AOP" }
+    - { name: "Kalmia Conference Room", location: "Geisel Core, 2nd floor, MS" }
+    - { name: "LAO Conference Room", location: "Geisel Core, 2nd floor, LAO" }
+    - { name: "Quince Conference Room", location: "Geisel Southwest, 1st floor" }
+    - { name: "Redwood Conference Room", location: "Geisel West, 2nd floor, RRAS/ALP" }
+    - { name: "Torrey Pines Conference Room", location: "Geisel Core, 1st floor, ITS" }
 
   new-user: |
     :wave: At the UC San Diego Library, we are using Slack for three main benefits: Communications, Transparency, and Community. To help us reach those benefits, we created these guidelines. :rocket:
