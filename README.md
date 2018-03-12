@@ -1,6 +1,6 @@
-# horton-bot
+# Dewey
 [![Coverage
-Status](https://coveralls.io/repos/github/ucsdlib/horton-bot/badge.svg?branch=develop)](https://coveralls.io/github/ucsdlib/horton-bot?branch=develop) [![CircleCI](https://circleci.com/gh/ucsdlib/horton-bot/tree/develop.svg?style=svg)](https://circleci.com/gh/ucsdlib/horton-bot/tree/develop) [![Dependency Status](https://gemnasium.com/badges/github.com/ucsdlib/horton-bot.svg)](https://gemnasium.com/github.com/ucsdlib/horton-bot)
+Status](https://coveralls.io/repos/github/ucsdlib/dewey/badge.svg?branch=develop)](https://coveralls.io/github/ucsdlib/dewey?branch=develop) [![CircleCI](https://circleci.com/gh/ucsdlib/dewey/tree/develop.svg?style=svg)](https://circleci.com/gh/ucsdlib/dewey/tree/develop) [![Dependency Status](https://gemnasium.com/badges/github.com/ucsdlib/dewey.svg)](https://gemnasium.com/github.com/ucsdlib/dewey)
 
 A Slack-bot for the UCSD Library
 
@@ -14,7 +14,7 @@ In time, assuming interest, additional bot-like features will be added.
 
 ## Installing
 
-1. Clone the repo: `git clone https://github.com/ucsdlib/horton-bot.git`
+1. Clone the repo: `git clone https://github.com/ucsdlib/dewey.git`
 2. Install dependencies: `bundle install`
 3. Install [phantomjs](http://phantomjs.org/). Used for `hours` command
 4. Run test suite `rake`. This will also run `rubocop` in addition to `rspec`

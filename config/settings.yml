@@ -1,9 +1,9 @@
 help:
   general: |
-    *Horton Bot* - Your friendly Library bot
+    *Dewey* - Your friendly Library bot
 
     Commands -
-    e.g. `horton service desk`
+    e.g. `dewey service desk`
 
     *service desk* - Will let you knows ways to contact the ITS Service Desk
     *hours* - Will let you know today's Library hours (for all buildings)
