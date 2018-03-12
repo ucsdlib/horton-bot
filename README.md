@@ -2,7 +2,9 @@
 [![Coverage
 Status](https://coveralls.io/repos/github/ucsdlib/dewey/badge.svg?branch=develop)](https://coveralls.io/github/ucsdlib/dewey?branch=develop) [![CircleCI](https://circleci.com/gh/ucsdlib/dewey/tree/develop.svg?style=svg)](https://circleci.com/gh/ucsdlib/dewey/tree/develop) [![Dependency Status](https://gemnasium.com/badges/github.com/ucsdlib/dewey.svg)](https://gemnasium.com/github.com/ucsdlib/dewey)
 
-A Slack-bot for the UCSD Library
+A happy and wise Slack-bot for the UCSD Library
+
+<img title="Dewey the wise owl" src="assets/dewey.png" width="200">
 
 ## What can it do?
 
