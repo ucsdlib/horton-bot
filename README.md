@@ -8,16 +8,20 @@ A happy and wise Slack-bot for the UCSD Library
 
 ## What can it do?
 
-1. For now, the bot will post to the `#general` channel when a new channel is created.
-2. `hours` - responds with Library building(s) hours for the day
-3. `service desk` - responds with options for contacting the service desk
+### Events
+1. The bot will post to the `#general` channel when a new channel is created.
+1. The bot will welcome a new user to the team with a customized welcome message
+
+### Commands
+1. `hours` - responds with Library building(s) hours for the day
+1. `service desk` - responds with options for contacting the service desk
 
 In time, assuming interest, additional bot-like features will be added.
 
 ## Installing
 
 1. Clone the repo: `git clone https://github.com/ucsdlib/dewey.git`
-2. Install dependencies: `bundle install`
-3. Install [phantomjs](http://phantomjs.org/). Used for `hours` command
-4. Run test suite `rake`. This will also run `rubocop` in addition to `rspec`
-5. Run application `SLACK_API_TOKEN=<your-token> bundle exec puma`
+1. Install dependencies: `bundle install`
+1. Install [phantomjs](http://phantomjs.org/). Used for `hours` command
+1. Run test suite `rake`. This will also run `rubocop` in addition to `rspec`
+1. Run application `SLACK_API_TOKEN=<your-token> bundle exec puma`
