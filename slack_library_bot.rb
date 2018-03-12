@@ -1,5 +1,6 @@
 require 'slack-ruby-bot'
 require 'slack-library-bot/commands/about'
+require 'slack-library-bot/commands/rooms'
 require 'slack-library-bot/commands/hours'
 require 'slack-library-bot/commands/service_desk'
 require 'slack-library-bot/helpers/daily_hours'
