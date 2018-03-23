@@ -7,7 +7,7 @@
     - vars/slack_token.yml
 
   roles:
-    - { role: carlosbuenosvinos.ansistrano-deploy, become: yes }
+    - { role: carlosbuenosvinos.ansistrano-deploy }
 
   pre_tasks:
     - name: Get timestamp for repo
@@ -22,7 +22,6 @@
 
   tasks:
     - name: Permissions and folders
-      become: yes
       file:
         path: "{{ item }}"
         recurse: true
@@ -36,7 +35,6 @@
         - "{{ ansistrano_deploy_to }}"
 
     - name: Install Puma config file
-      become: yes
       template:
         src: puma.rb.j2
         dest: "{{ ansistrano_deploy_to }}/shared/puma.rb"
@@ -60,11 +58,9 @@
       - name: Install Puma service files
         become: yes
         template:
-          src: "{{ item }}.j2"
-          dest: /etc/systemd/system/{{ item }}
+          src: puma.service.j2
+          dest: /etc/systemd/system/puma.service
           mode: 0755
-        with_items:
-          - puma.service
 
       - name: Reload systemd daemon
         become: yes
@@ -76,9 +72,7 @@
         systemd:
           enabled: yes
           state: started
-          name: "{{ item }}"
-        with_items:
-          - puma.service
+          name: puma.service
 
       when: stat_result.stat.exists == False
 
