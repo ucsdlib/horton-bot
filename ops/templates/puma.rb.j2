@@ -18,8 +18,8 @@ on_restart do
 # close log files, database connections, etc.
 end
 
-workers '{{ ansible_processor_vcpus }}'
-worker_timeout 120
+# workers '{{ ansible_processor_vcpus }}'
+# worker_timeout 120
 # on_worker_boot do
 #   # Code to run when a worker boots to setup the process before booting
 # end
