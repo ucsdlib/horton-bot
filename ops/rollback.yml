@@ -1,7 +1,6 @@
 ---
 - name: Rollback Bot application
   hosts: lib-slackbots
-  become: yes
 
   vars_files:
     - vars/bot.yml
@@ -14,3 +13,4 @@
       systemd:
         name: puma
         state: restarted
+      become: yes
