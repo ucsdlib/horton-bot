@@ -10,7 +10,7 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     ast (2.4.0)
     backports (3.11.1)
-    byebug (10.0.0)
+    byebug (10.0.2)
     celluloid (0.17.3)
       celluloid-essentials
       celluloid-extras
