@@ -11,7 +11,8 @@ bind 'tcp://0.0.0.0:9292'
 
 pidfile '{{ ansistrano_deploy_to }}/shared/tmp/pids/puma.pid'
 state_path '{{ ansistrano_deploy_to }}/shared/tmp/pids/puma.state'
-stdout_redirect '{{ ansistrano_deploy_to }}/shared/log/stdout', '{{ ansistrano_deploy_to }}/shared/log/stderr'
+# Log to syslog. 3rd parameter sets append == true
+stdout_redirect '/var/log/messages', '/var/log/messages', true
 
 on_restart do
 # Code to run before doing a restart. This code should
