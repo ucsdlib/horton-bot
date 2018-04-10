@@ -9,6 +9,7 @@ ops/ansible.cfg
 ops/hosts
 ops/*.retry
 ops/*.log
+ops/.vault_pass.txt
 *.log
 
 fugitive*
