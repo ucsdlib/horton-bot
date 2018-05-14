@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'celluloid-io', '~> 0.17'
-gem 'eventmachine', '~> 1.2.5'
+gem 'eventmachine', '~> 1.2.7'
 gem 'nokogiri', '>= 1.8'
 gem 'puma', '~> 3.11'
 gem 'sinatra', '~> 2.0'
