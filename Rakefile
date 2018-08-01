@@ -11,5 +11,6 @@ RuboCop::RakeTask.new(:rubocop) do |task|
   task.requires << 'rubocop-rspec'
   task.fail_on_error = true
 end
+# task default: %w[rubocop spec]
 
-task default: %w[rubocop spec]
+task default: %w[spec]

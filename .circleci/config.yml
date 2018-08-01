@@ -23,5 +23,8 @@ jobs:
           paths:
             - /usr/local/bundle
       - run:
+          name: Run Rubocop
+          command: bundle exec rubocop
+      - run:
           name: Run Tests
           command: COVERALLS_REPO_TOKEN=$COVERALLS_REPO_TOKEN bundle exec rake
