@@ -9,6 +9,9 @@ jobs:
           RAILS_ENV: test
     steps:
       - checkout
+      - run:
+          name: Install system dependencies for building ruby c extensions
+          command: apk add --no-cache build-base
       - restore_cache:
           keys:
           - bundle-{{ "Gemfile" }}-{{ checksum "Gemfile.lock" }}
