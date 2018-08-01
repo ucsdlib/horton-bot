@@ -8,10 +8,10 @@ jobs:
         environment:
           RAILS_ENV: test
     steps:
-      - checkout
       - run:
-          name: Install system dependencies for building ruby c extensions
-          command: apk add --no-cache build-base
+          name: Install system dependencies
+          command: apk add --no-cache build-base git openssh-client
+      - checkout
       - restore_cache:
           keys:
           - bundle-{{ "Gemfile" }}-{{ checksum "Gemfile.lock" }}
