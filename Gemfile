@@ -18,7 +18,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'rack-test', '~> 0.8'
+  gem 'rack-test', '~> 1.1'
   gem 'rspec', '~> 3.7'
   gem 'timecop', '~> 0.9'
   gem 'vcr', '~> 4.0'
