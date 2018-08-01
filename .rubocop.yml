@@ -16,11 +16,9 @@ Metrics/LineLength:
   Exclude:
     - 'spec/slack-library-bot/commands/hours_spec.rb'
 
+Security/Open:
+  Exclude:
+    - 'slack-library-bot/helpers/daily_hours.rb'
+
 Style/FrozenStringLiteralComment:
   Enabled: false
-
-RSpec/FilePath:
-  Enabled: false
-
-RSpec/ExampleLength:
-  Max: 10
