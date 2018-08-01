@@ -18,10 +18,16 @@ A happy and wise Slack-bot for the UCSD Library
 
 In time, assuming interest, additional bot-like features will be added.
 
-## Installing
+## Installing (docker)
+1. Clone the repo: `git clone https://github.com/ucsdlib/dewey.git`
+1. Build image: `docker build -t dewey .`
 
+Run rubocop or tests:
+1. `docker run --rm dewey bundle exec rubocop`
+1. `docker run --rm dewey bundle exec rake`
+
+## Installing (traditional)
 1. Clone the repo: `git clone https://github.com/ucsdlib/dewey.git`
 1. Install dependencies: `bundle install`
-1. Install [phantomjs](http://phantomjs.org/). Used for `hours` command
 1. Run test suite `rake`. This will also run `rubocop` in addition to `rspec`
 1. Run application `SLACK_API_TOKEN=<your-token> bundle exec puma`
