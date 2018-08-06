@@ -20,7 +20,7 @@ end
 
 group :test do
   gem 'rack-test', '~> 1.1'
-  gem 'rspec', '~> 3.7'
+  gem 'rspec', '~> 3.8'
   gem 'timecop', '~> 0.9'
   gem 'vcr', '~> 4.0'
   gem 'webmock', '~> 3.2'
