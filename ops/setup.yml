@@ -8,7 +8,6 @@
 
   roles:
     - { role: geerlingguy.repo-epel, become: true }
-    - { role: zzet.rbenv, become: true }
 
   tasks:
     - name: Install dependencies
