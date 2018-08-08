@@ -2,7 +2,7 @@
 [![Coverage
 Status](https://coveralls.io/repos/github/ucsdlib/theodor/badge.svg?branch=develop)](https://coveralls.io/github/ucsdlib/theodor?branch=develop) [![CircleCI](https://circleci.com/gh/ucsdlib/theodor/tree/develop.svg?style=svg)](https://circleci.com/gh/ucsdlib/theodor/tree/develop)
 
-A happy and wise Slack-bot for the UCSD Library
+A happy and wise Slack-bot for the UCSD Library, or so we've been told.
 
 <img title="Theodor the wise owl" src="assets/dewey.png" width="200">
 
