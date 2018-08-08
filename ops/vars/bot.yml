@@ -6,9 +6,9 @@ bot_project_name: dewey
 rbenv:
   env: user
   version: v1.1.1
-  default_ruby: 2.4.2
+  default_ruby: 2.4.4
   rubies:
-    - version: 2.4.2
+    - version: 2.4.4
 rbenv_users:
   - "{{ bot_user }}"
 
