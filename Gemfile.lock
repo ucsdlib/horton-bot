@@ -130,7 +130,6 @@ GEM
       gli
       hashie
       websocket-driver
-    syslogger (1.6.5)
     term-ansicolor (1.6.0)
       tins (~> 1.0)
     thor (0.19.4)
@@ -171,7 +170,6 @@ DEPENDENCIES
   sinatra (~> 2.0.2)
   sinatra-contrib
   slack-ruby-bot (~> 0.10)
-  syslogger (~> 1.6)
   timecop (~> 0.9)
   vcr (~> 4.0)
   webmock (~> 3.2)
