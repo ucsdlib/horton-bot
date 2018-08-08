@@ -1,6 +1,6 @@
 # Theodor
 [![Coverage
-Status](https://coveralls.io/repos/github/ucsdlib/theodor/badge.svg?branch=develop)](https://coveralls.io/github/ucsdlib/dewey?branch=develop) [![CircleCI](https://circleci.com/gh/ucsdlib/dewey/tree/develop.svg?style=svg)](https://circleci.com/gh/ucsdlib/dewey/tree/develop) [![Dependency Status](https://gemnasium.com/badges/github.com/ucsdlib/dewey.svg)](https://gemnasium.com/github.com/ucsdlib/dewey)
+Status](https://coveralls.io/repos/github/ucsdlib/theodor/badge.svg?branch=develop)](https://coveralls.io/github/ucsdlib/theodor?branch=develop) [![CircleCI](https://circleci.com/gh/ucsdlib/theodor/tree/develop.svg?style=svg)](https://circleci.com/gh/ucsdlib/theodor/tree/develop)
 
 A happy and wise Slack-bot for the UCSD Library
 
