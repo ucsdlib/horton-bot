@@ -1,10 +1,10 @@
-# Dewey
+# Theodor
 [![Coverage
 Status](https://coveralls.io/repos/github/ucsdlib/dewey/badge.svg?branch=develop)](https://coveralls.io/github/ucsdlib/dewey?branch=develop) [![CircleCI](https://circleci.com/gh/ucsdlib/dewey/tree/develop.svg?style=svg)](https://circleci.com/gh/ucsdlib/dewey/tree/develop) [![Dependency Status](https://gemnasium.com/badges/github.com/ucsdlib/dewey.svg)](https://gemnasium.com/github.com/ucsdlib/dewey)
 
 A happy and wise Slack-bot for the UCSD Library
 
-<img title="Dewey the wise owl" src="assets/dewey.png" width="200">
+<img title="Theodor the wise owl" src="assets/dewey.png" width="200">
 
 ## What can it do?
 
@@ -20,11 +20,11 @@ In time, assuming interest, additional bot-like features will be added.
 
 ## Installing (docker)
 1. Clone the repo: `git clone https://github.com/ucsdlib/dewey.git`
-1. Build image: `docker build -t dewey .`
+1. Build image: `docker build -t theodor .`
 
 Run rubocop or tests:
-1. `docker run --rm dewey bundle exec rubocop`
-1. `docker run --rm dewey bundle exec rake`
+1. `docker run --rm theodor bundle exec rubocop`
+1. `docker run --rm theodor bundle exec rake`
 
 ## Installing (traditional)
 1. Clone the repo: `git clone https://github.com/ucsdlib/dewey.git`

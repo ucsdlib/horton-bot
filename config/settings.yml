@@ -1,9 +1,9 @@
 help:
   general: |
-    *Dewey* - Your friendly Library bot
+    *Theodor* - Your friendly Library bot
 
     Commands -
-    e.g. `dewey service desk`
+    e.g. `theodor service desk`
 
     *service desk* - Will let you knows ways to contact the ITS Service Desk
     *hours* - Will let you know today's Library hours (for all buildings)
@@ -40,7 +40,7 @@ commands:
     2. *#general* - For posting library-related information. (i.e. upcoming programs, intersting articles about the library or other libraries).
     3. *#random* - For posting non-library related matters. (i.e. SpaceX Falcon Heavy launch, citrus fruit giveaways, etc.)
     4. *#it-servicedesk* - Submit IT requests on this channel.
-    5. *#coffee-buddies* - Join this channel to get to know your fellow co-workers! You'll be paired with a library employee every two weeks and you can arrange a time to meet up over coffee, tea, or lunch. 
+    5. *#coffee-buddies* - Join this channel to get to know your fellow co-workers! You'll be paired with a library employee every two weeks and you can arrange a time to meet up over coffee, tea, or lunch.
 
     *:slack:Communication Etiquette*
     Be clear and professional in communication
@@ -64,10 +64,10 @@ commands:
 
     *:x: Make sure there's a business reason to create private channels.*
     * On rare occasion, you may need to make a channel private for confidential information.
-    
+
     *:hear_no_evil: Use @mentions in a smart way.*
     * @mentions are a way to quickly notify a person, group, or channel by simply putting an @ in front of their username or slack group name. We seldomly use @channel except for critical matters since you could be notifying hundreds of people, possibly in different time zones. @here (outside of #general) is less disruptive as it alerts everyone in the channel only if they are currently online.
-    
+
     *:slack:To sum it all up...*
 
     *:shark: Be patient with others.*
