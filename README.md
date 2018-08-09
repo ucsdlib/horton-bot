@@ -1,6 +1,8 @@
 # Theodor
-[![Coverage
-Status](https://coveralls.io/repos/github/ucsdlib/theodor/badge.svg?branch=develop)](https://coveralls.io/github/ucsdlib/theodor?branch=develop) [![CircleCI](https://circleci.com/gh/ucsdlib/theodor/tree/develop.svg?style=svg)](https://circleci.com/gh/ucsdlib/theodor/tree/develop)
+[![Coverage Status](https://coveralls.io/repos/github/ucsdlib/theodor/badge.svg?branch=develop)](https://coveralls.io/github/ucsdlib/theodor?branch=develop)
+[![CircleCI](https://circleci.com/gh/ucsdlib/theodor/tree/develop.svg?style=svg)](https://circleci.com/gh/ucsdlib/theodor/tree/develop)
+[![Docker Build Status](https://img.shields.io/docker/build/ucsdlib/theodor.svg)](https://hub.docker.com/r/ucsdlib/theodor/builds/)
+
 
 A happy and wise Slack-bot for the UCSD Library, or so we've been told.
 
@@ -31,3 +33,12 @@ Run rubocop or tests:
 1. Install dependencies: `bundle install`
 1. Run test suite `rake`. This will also run `rubocop` in addition to `rspec`
 1. Run application `SLACK_API_TOKEN=<your-token> bundle exec puma`
+
+## Kubernetes Deploy
+1. A working kubernetes cluster: `minikube start`
+1. An install of helm and kubectl
+1. Tiller in the cluster: `helm init`
+1. A secret.yaml installed on the cluster like `theodor/secret.yaml` with your
+   API token base64-encoded
+1. Install secret: `kubectl create -f theodor/secret.yaml`
+1. Run: `helm install --name theodor ./theodor`

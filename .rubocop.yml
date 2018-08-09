@@ -6,6 +6,7 @@ AllCops:
     - 'vendor/**/*'
     - 'bin/**/*'
     - 'ops/**/*'
+    - 'theodor/**/*'
 
 Metrics/BlockLength:
   Exclude:
