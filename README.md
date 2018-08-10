@@ -1,6 +1,6 @@
 # Theodor
-[![Coverage Status](https://coveralls.io/repos/github/ucsdlib/theodor/badge.svg?branch=develop)](https://coveralls.io/github/ucsdlib/theodor?branch=develop)
-[![CircleCI](https://circleci.com/gh/ucsdlib/theodor/tree/develop.svg?style=svg)](https://circleci.com/gh/ucsdlib/theodor/tree/develop)
+[![Coverage Status](https://coveralls.io/repos/github/ucsdlib/theodor/badge.svg?branch=master)](https://coveralls.io/github/ucsdlib/theodor?branch=master)
+[![CircleCI](https://circleci.com/gh/ucsdlib/theodor/tree/master.svg?style=svg)](https://circleci.com/gh/ucsdlib/theodor/tree/master)
 [![Docker Build Status](https://img.shields.io/docker/build/ucsdlib/theodor.svg)](https://hub.docker.com/r/ucsdlib/theodor/builds/)
 
 
