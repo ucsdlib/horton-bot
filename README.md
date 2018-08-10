@@ -41,4 +41,6 @@ Run rubocop or tests:
 1. A secret.yaml installed on the cluster like `theodor/secret.yaml` with your
    API token base64-encoded
 1. Install secret: `kubectl create -f theodor/secret.yaml`
-1. Run: `helm install --name theodor ./theodor`
+
+1. Dry Run/Debugging: `helm install --dry-run --debug ./theodor`
+1. Real Deal Run: `helm install --name theodor ./theodor`
