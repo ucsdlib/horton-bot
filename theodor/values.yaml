@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: ucsdlib/theodor
-  tag: latest
+  tag: production
   pullPolicy: IfNotPresent
   env:
     name: SLACK_API_TOKEN
