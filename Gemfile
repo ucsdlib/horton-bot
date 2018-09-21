@@ -12,7 +12,7 @@ group :development, :test do
   gem 'byebug', '~> 10.0'
   gem 'coveralls', require: false
   gem 'rake', '~> 12.3'
-  gem 'rubocop', '~> 0.58.2', require: false
+  gem 'rubocop', '~> 0.59.1', require: false
   gem 'rubocop-rspec', '~> 1.29.1', require: false
   gem 'simplecov', '~> 0.16', require: false
 end
