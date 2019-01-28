@@ -6,7 +6,7 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    addressable (2.5.2)
+    addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
     ast (2.4.0)
     async (1.15.1)
@@ -36,7 +36,7 @@ GEM
     faraday_middleware (0.13.0)
       faraday (>= 0.7.4, < 1.0)
     gli (2.18.0)
-    hashdiff (0.3.7)
+    hashdiff (0.3.8)
     hashie (3.6.0)
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
@@ -54,7 +54,7 @@ GEM
     parser (2.5.1.2)
       ast (~> 2.4.0)
     powerpack (0.1.2)
-    public_suffix (3.0.2)
+    public_suffix (3.0.3)
     puma (3.12.0)
     rack (2.0.5)
     rack-protection (2.0.4)
@@ -128,7 +128,7 @@ GEM
       thread_safe (~> 0.1)
     unicode-display_width (1.4.0)
     vcr (4.0.0)
-    webmock (3.3.0)
+    webmock (3.5.1)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
@@ -157,7 +157,7 @@ DEPENDENCIES
   slack-ruby-bot (~> 0.11)
   timecop (~> 0.9)
   vcr (~> 4.0)
-  webmock (~> 3.2)
+  webmock (~> 3.5)
 
 BUNDLED WITH
    1.16.3
