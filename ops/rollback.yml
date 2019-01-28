@@ -6,7 +6,7 @@
     - vars/bot.yml
 
   roles:
-    - { role: carlosbuenosvinos.ansistrano-rollback }
+    - { role: ansistrano.rollback }
 
   tasks:
     - name: Restarting Puma..

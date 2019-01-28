@@ -8,7 +8,7 @@
 
   roles:
     - { role: zzet.rbenv, become: true }
-    - { role: carlosbuenosvinos.ansistrano-deploy }
+    - { role: ansistrano.deploy }
 
   pre_tasks:
     - name: Get timestamp for repo
