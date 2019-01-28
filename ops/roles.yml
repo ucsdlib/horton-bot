@@ -1,5 +1,5 @@
 ---
-- carlosbuenosvinos.ansistrano-deploy,2.7.0
-- carlosbuenosvinos.ansistrano-rollback,2.0.1
-- geerlingguy.repo-epel,1.2.2
-- zzet.rbenv,3.3.4
+- ansistrano.deploy,3.0.1
+- ansistrano.rollback,3.0.0
+- geerlingguy.repo-epel,1.2.3
+- zzet.rbenv,3.4.2
