@@ -14,7 +14,7 @@ GEM
       timers (~> 4.1)
     async-io (1.18.2)
       async (~> 1.14)
-    async-websocket (0.6.1)
+    async-websocket (0.7.0)
       async-io
       websocket-driver (~> 0.7.0)
     backports (3.11.4)
