@@ -1,4 +1,4 @@
-FROM ruby:2.4.4-alpine as builder
+FROM ruby:2.6.2-alpine as builder
 MAINTAINER "Matt Critchlow <mcritchlow@ucsd.edu">
 
 RUN apk add --no-cache build-base git openssh-client
@@ -7,7 +7,7 @@ WORKDIR /src
 COPY Gemfile* /src/
 RUN bundle install --jobs 4 --retry 3 --without development test
 
-FROM ruby:2.4.4-alpine
+FROM ruby:2.6.2-alpine
 
 RUN addgroup -g 1000 -S theodor && \
     adduser -u 1000 -S theodor -G theodor
