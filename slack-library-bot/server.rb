@@ -34,8 +34,8 @@ module SlackLibraryBot
         im = slack_client.im_open(user: user_slack_id)
         im_channel_id = im && im['channel'] && im['channel']['id']
         return @im_opens[user_slack_id] = im_channel_id
-      rescue Slack::Web::Api::Errors::SlackError => err
-        STDERR.puts err.to_s
+      rescue Slack::Web::Api::Errors::SlackError => e
+        warn e.to_s
         return nil
       end
     end
