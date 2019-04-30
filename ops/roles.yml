@@ -1,5 +1,5 @@
 ---
-- ansistrano.deploy,3.0.1
+- ansistrano.deploy,3.1.0
 - ansistrano.rollback,3.0.0
 - geerlingguy.repo-epel,1.2.3
 - zzet.rbenv,3.4.2
