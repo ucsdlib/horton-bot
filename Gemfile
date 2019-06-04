@@ -13,7 +13,7 @@ group :development, :test do
   gem 'coveralls', require: false
   gem 'rake', '~> 12.3'
   gem 'rubocop', '~> 0.71.0', require: false
-  gem 'rubocop-rspec', '~> 1.32.0', require: false
+  gem 'rubocop-rspec', '~> 1.33.0', require: false
   gem 'simplecov', '~> 0.16', require: false
 end
 
