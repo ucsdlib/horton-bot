@@ -1,4 +1,4 @@
-FROM ruby:2.6.2-alpine
+FROM ruby:2.6.3-alpine
 MAINTAINER "Matt Critchlow <mcritchlow@ucsd.edu">
 
 RUN apk add --no-cache build-base git openssh-client
