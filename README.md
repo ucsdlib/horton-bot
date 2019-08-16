@@ -35,6 +35,8 @@ Run rubocop or tests:
 1. Run application `SLACK_API_TOKEN=<your-token> bundle exec puma`
 
 ## Kubernetes Deploy
+> Note: this is not how we've deployed the bot. YMMV
+
 1. A working kubernetes cluster: `minikube start`
 1. An install of helm and kubectl
 1. Tiller in the cluster: `helm init`
