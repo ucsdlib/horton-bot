@@ -22,5 +22,5 @@ group :test do
   gem 'rspec', '~> 3.8'
   gem 'timecop', '~> 0.9'
   gem 'vcr', '~> 5.0'
-  gem 'webmock', '~> 3.6'
+  gem 'webmock', '~> 3.7'
 end
