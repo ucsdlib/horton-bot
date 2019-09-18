@@ -20,9 +20,20 @@ A happy and wise Slack-bot for the UCSD Library, or so we've been told.
 
 In time, assuming interest, additional bot-like features will be added.
 
+## API Token
+The Slack bot requires an API token to connect to the Slack API.
+
+We have a production token which should only be used for production. If you need
+to test new features locally, you can use the `theodor-test` API token.
+
+Note that this account is invited into the `bot-testing` channel.
+
+This token can be found in Slack directly or in LastPass.
+
 ## Installing (docker)
 1. Clone the repo: `git clone https://github.com/ucsdlib/theodor.git`
 1. Build image: `docker build -t theodor .`
+1. Run image: `docker run --rm -e "SLACK_API_TOKEN=<test-token>" theodor`
 
 Run rubocop or tests:
 1. `docker run --rm theodor bundle exec rubocop`
@@ -32,7 +43,7 @@ Run rubocop or tests:
 1. Clone the repo: `git clone https://github.com/ucsdlib/theodor.git`
 1. Install dependencies: `bundle install`
 1. Run test suite `rake`. This will also run `rubocop` in addition to `rspec`
-1. Run application `SLACK_API_TOKEN=<your-token> bundle exec puma`
+1. Run application `SLACK_API_TOKEN=<test-token> bundle exec puma`
 
 ## Kubernetes Deploy
 1. A working kubernetes cluster: `minikube start`
