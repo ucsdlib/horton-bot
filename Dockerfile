@@ -13,3 +13,5 @@ COPY --chown=theodor:theodor Gemfile* /home/theodor/app/
 RUN bundle install --jobs 4 --retry 3
 
 COPY --chown=theodor:theodor . /home/theodor/app/
+
+CMD ["bundle", "exec", "puma"]
