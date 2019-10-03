@@ -46,12 +46,14 @@ Run rubocop or tests:
 1. Run application `SLACK_API_TOKEN=<test-token> bundle exec puma`
 
 ## Kubernetes Deploy
-1. A working kubernetes cluster: `minikube start`
-1. An install of helm and kubectl
-1. Tiller in the cluster: `helm init`
-1. A secret.yaml installed on the cluster like `theodor/secret.yaml` with your
-   API token base64-encoded
-1. Install secret: `kubectl create -f theodor/secret.yaml`
+Install Dependencies:
+  - [k3d][k3d] (allows running a [k3s][k3s] cluster locally inside Docker containers)
+  - Docker, Helm, and kubectl (other required dependencies)
 
-1. Dry Run/Debugging: `helm install --dry-run --debug ./theodor`
-1. Real Deal Run: `helm install --name theodor ./theodor`
+1. Run the `./k3d-theodor.sh <api-token>` script, ensuring to pass the test API token as a
+   parameter
+1. You can navigate to the `bot-testing` channel to interact w/ the
+   `theodor-test` bot instance, or directly via DM
+
+[k3d]:https://github.com/rancher/k3d/
+[k3s]:https://github.com/rancher/k3s/

@@ -25,11 +25,11 @@ spec:
           command: ['bundle', 'exec', 'puma']
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-            - name: {{ .Values.image.env.name }}
+            - name: "SLACK_API_TOKEN"
               valueFrom:
                 secretKeyRef:
-                  name: {{ .Values.image.env.secretKeyRefName }}
-                  key: {{ .Values.image.env.secretKeyRefKey }}
+                  name: {{ template "theodor.fullname" . }}
+                  key: slack_api_token
           ports:
             - name: http
               containerPort: 80
