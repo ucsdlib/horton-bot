@@ -8,10 +8,9 @@ image:
   repository: ucsdlib/theodor
   tag: production
   pullPolicy: IfNotPresent
-  env:
-    name: SLACK_API_TOKEN
-    secretKeyRefName: slack-secret
-    secretKeyRefKey: slack_api_token
+
+# Slack API token
+apiToken: a-token
 
 service:
   type: ClusterIP
