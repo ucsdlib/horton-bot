@@ -7,9 +7,7 @@ fi
 api_token=$1
 
 echo "cluster: creating theodor k3s cluster"
-k3d create -n theodor --workers 1
-echo "sleeping for a bit to let the cluster spin up"
-sleep 15
+k3d create -n theodor --workers 1 --wait 0
 echo "k3s: setting up kubeconfig"
 export KUBECONFIG="$(k3d get-kubeconfig --name='theodor')"
 
@@ -19,10 +17,7 @@ echo "tiller: setting up rbac for service account"
 kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
 
 echo "helm: initializing with tiller service account"
-helm init --service-account tiller
-
-echo "wait while tiller installs"
-sleep 60
+helm init --service-account tiller --wait
 
 echo "helm: installing Theodor"
 helm install --name theodor ./theodor --set=apiToken="$api_token"
