@@ -4,7 +4,7 @@ gem 'async-websocket', '>= 0.6'
 gem 'eventmachine', '~> 1.2.5'
 gem 'nokogiri', '>= 1.8'
 gem 'puma', '~> 4.3'
-gem 'sinatra', '~> 2.0.7'
+gem 'sinatra', '~> 2.0.8'
 gem 'sinatra-contrib'
 gem 'slack-ruby-bot', '~> 0.12'
 
